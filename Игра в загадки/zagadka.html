@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+var Riddle = [
+    ['Отгадайте загадку. Зимой и летом - одним цветом.'],
+    ['Не огонь, а жжется.'],
+    ['Без рук, без топоренка, построена избенка.'],
+    ['Конь бежит, Земля дрожит.']
+]
+
+var Answers = [
+    ['ель','елка','ёлка'],
+    ['крапива'],
+    ['гнездо'],
+    ['гром']
+]
+var score = 0;
+
+ function riddle(rdl, answr,){
+     AnswerUser = prompt(rdl);
+     AnswerUser = AnswerUser.toLowerCase()
+        if (AnswerUser == answr){
+            alert('Вы угадали!')
+            score++
+        } else {
+            alert('Не правильный ответ')  
+        }
+ }
+riddle(Riddle[0],Answers[0][0]);
+
+riddle(Riddle[1],Answers[1]);
+
+riddle(Riddle[2],Answers[2]);
+
+riddle(Riddle[3],Answers[3]);
+
+alert('Количество правильных ответов: ' + score)
+</script>

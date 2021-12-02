@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+var sum = +prompt ('Введите сумму вклада');
+var procent = +prompt ('Введите процент');
+procent = procent / 100;
+
+/*var year1 = sum + (sum * procent);
+var year2 = year1 + (year1 * procent);
+var year3 = year2 + (year2 * procent);
+var year4 = year3 + (year3 * procent);
+var year5 = year4 + (year4 * procent);
+
+alert('Изменение размера вклада по годам:\n' +
+'1 год: ' + year1.toFixed(2) + ' рублей\n' +
+'2 год: ' + year2.toFixed(2) + ' рублей\n'+
+'3 год: ' + year3.toFixed(2) + ' рублей\n' +
+'4 год: ' + year4.toFixed(2) + ' рублей\n' +
+'5 год: ' + year5.toFixed(2) + ' рублей\n'
+) */
+
+var result = 'Изменение размера вклада по годам:\n';
+for(var i = 1; i <= 5; i++) {
+    sum = sum + (sum * procent);
+    result = result + i + ' год: ' + sum.toFixed(2) + ' рублей\n';
+}
+alert(result);
+</script>
+
+
+</script>

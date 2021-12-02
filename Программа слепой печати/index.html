@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<script>
+    var letters = [
+["а","ф"],
+["ы","в"],
+["о","ж"]
+];
+var messages = [
+["Положите 4 пальца левой руки - мизинец, безымянный, средний, указательный - на буквы ф, ы, в, а. Запомните, что буква А находится под указательным пальцем, а Ф - под мизинцем.\nТеперь неспеша набирайте следующий текст.\nПостарайтесь не смотреть на клавиатуру!"],
+["Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О.\nЗапомните расположение пальцев.\nПовторяйте за мной."],
+["Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний -— на Л, указательный — на О.\nЗапомните расположение пальцев."]
+];
+alert("Приветствую! Это программа по обучению слепой печати.");
+
+function getRandomNumber(max){
+    var rand = Math.round(Math.random() * max);
+    return rand;
+}
+
+function generateText(letters,length){
+    var text = '';
+    for(var i = 0; i < length; i++){
+        var n = getRandomNumber(letters.length - 1);
+        text = text + letters[n];
+    }
+    return text;
+}
+
+function print(msg,letter,lengthLet){
+    while(true){
+alert(msg);
+var text = generateText(letter,lengthLet);
+var userText = prompt(text);
+if(userText == text){
+    alert('Всё верно!');
+    break;
+} else {
+    alert('Вы ошиблись. Попробуйте еще раз!')
+}
+}
+}
+ print(messages[0],letters[0],6);
+ print(messages[1],letters[1],8);
+ print(messages[2],letters[2],10);
+</script>

@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+    let Year = +prompt('Укажите любой год');
+
+    if (Year % 4 == 0) {
+        /*шаг2*/
+        if (Year % 100 == 0) {
+            /*шаг3*/
+            if (Year % 400 == 0) {
+                alert(Year + ' Год високосный');
+            } else {
+                alert(Year + ' Год не високосный')
+            }
+        } else {
+            alert(Year + ' Год високосный');
+        }
+    } else {
+        alert(Year + ' Год не високосный');
+    }
+</script>
